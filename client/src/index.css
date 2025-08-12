@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+}
+
+@theme {
+  /* * font family */
+  /* 📚 Font for paragraphs and UI text */
+  --font-roboto: "Roboto", sans-serif;
+  /* 🖋 Font for headings (e.g., titles, article names) */
+  --font-merriweather: "Merriweather", serif;
+  --font-inter: "Inter", serif;
+
+  /* * colors */
+  /* 🌐 Main page background (overall site background) */
+  --color-background: #ffffff;
+
+  /* 🧱 Section or card background (articles, widgets, etc.) */
+  --color-surface: #f9fafb;
+
+  /* 🔵 Primary accent color (buttons, links, active states) */
+  --color-primary: #1e3a8a;
+
+  /* ⚪ Text color on top of primary backgrounds (e.g. white text on blue button) */
+  --color-primary-foreground: #ffffff;
+
+  /* 🟡 Secondary accent color (badges, highlights, featured tags) */
+  --color-secondary: #eab308;
+
+  /* ⚫ Text on top of secondary background (like black on yellow) */
+  --color-secondary-foreground: #1f2937;
+
+  /* 🩶 Muted UI background (inputs, footer, separators, etc.) */
+  --color-muted: #f3f4f6;
+
+  /* 🔤 Muted small text (timestamps, author, meta info) */
+  --color-muted-foreground: #6b7280;
+
+  /* ➖ Soft border color (cards, input fields, nav) */
+  --color-border: #e5e7eb;
+
+  /* 📝 Headings (h1, h2, etc.) — strong and dark */
+  --color-heading: #111827;
+
+  /* 📄 Body paragraph text — readable gray tone */
+  --color-body: #374151;
+}
+/* * base styles */
+
+html {
+  @apply scroll-smooth font-inter;
+}
+
+body {
+  @apply bg-background;
+}
+
+/* * utils */
+.container {
+  @apply mx-auto;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* * components */
+
+.primary-btn {
+  @apply bg-primary
+           text-primary-foreground
+           px-5
+           py-2
+           rounded-md
+           font-semibold
+           hover:bg-blue-800
+           transition
+           duration-200;
+}
+
+div.Toastify__toast {
+  z-index: 99999;
+}
+
+/* react-select package custom styles */
+.react-select__control {
+  @apply border border-border bg-muted rounded-md shadow-none focus:ring-0 focus:outline-primary;
+}
+.react-select__menu {
+  @apply bg-white border border-border z-50;
+}
+.react-select__option {
+  @apply text-sm text-body cursor-pointer;
+}
+.react-select__option--is-selected {
+  @apply bg-primary text-white;
+}
+.react-select__option--is-focused {
+  @apply bg-muted;
+}
