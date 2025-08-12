@@ -8,7 +8,7 @@
 
 ## Live site & Relavent links
 
-**Live Site URL**: [https://curanews-d0209.web.app/](https://curanews-d0209.web.app/)
+**Live Site URL**: [https://curanews-d0209.web.app/](https://curanews-d0209.web.app/)\n
 **Admin Email**: admin@gmail.com
 **Admin Password**: Admin123@
 
